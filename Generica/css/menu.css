@@ -256,3 +256,45 @@
   }
 
 }
+.clientes{
+	margin-top: 100px;
+	margin-left: 250px;
+	height: 50%;
+	width: 800px;
+	
+}
+
+.clientes h3{
+	display: inline-block;
+  margin-top: 20px;
+}
+.primerocli{
+  width: 400px;
+  float: left;
+}
+.segundocli{
+  width: 400px;
+  float: left;
+}
+.botonescli{
+  margin-top: 50px;
+	margin-left: 10px;
+	height: 50px;
+	width: 700px;
+	display: inline-block;
+	
+}
+.botonescli input{
+  background-color: #a9a9ac;
+	display: inline-block;
+	 color: black;
+  padding: 10px 30px;
+  text-decoration: none;
+  margin-left: 45px;
+  margin-top: 10px;
+}
+.botonescli input:hover{
+	color: white;
+  background-color: #222A3F;
+
+}

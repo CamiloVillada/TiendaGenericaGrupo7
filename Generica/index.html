@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Tienda Generica</title>
-    <script src="app.js"></script>
 
 </head>
 
@@ -16,24 +15,24 @@
     <div class="container">
         <div class="row justify-content-center pt-5 mt-5 m-1">
             <div class="col-md-6 col-sm-8 col-xl-4 col-lg-5 formulario">
-                <form action="menu.html" method="POST">
                     <div class="form-group text-center pt-3">
                         <h1 class="text-light">INICIAR SESIÓN</h1>
                     </div>
+                <script src="app.js"></script>
+                <form name=form action="INICIO SESION" >
                     <div class="form-group mx-sm-4 pt-3">
-                        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Ingrese su Usuario">
+                        <input type="text" id="usuario" name="login" class="form-control" placeholder="Ingrese su Usuario">
                     </div>
                     <div class="form-group mx-sm-4 pb-3">
-                        <input type="text" id="contraseña" name="contraseña" class="form-control" placeholder="Ingrese su Contraseña">
+                        <input type="text" id="contraseña" name="password" class="form-control" placeholder="Ingrese su Contraseña">
                     </div>
                     <div class="form-group mx-sm-4 pb-2">
-                        <input type="submit" class="btn btn-block ingresar" value="INGRESAR">
+                        <input onclick= ingreso() type="button" id="ingresoAdmin" class="btn btn-block ingresar" value="INGRESAR">
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

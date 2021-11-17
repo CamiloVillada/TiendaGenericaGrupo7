@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
     <link rel="stylesheet" href="css/menu.css">
+    <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -51,6 +54,7 @@
       </li>
      <li class="profile">
          <div class="profile-details">
+           <!--<img src="profile.jpg" alt="profileImg">-->
            <div class="name_job">
              <div class="name">Administrador</div>
              <div class="job">Cerrar Sesión</div>
@@ -64,25 +68,43 @@
   </div>
   <section class="home-section">
       <div class="text">Tienda Generica</div>
+      <div class="clientes">
+          <div class="primerocli">
+            <h3>Cedula:</h3><input type = "text" name = "cedula_cliente">
+            <br />
+            <h3>Nombre Completo:</h3> <input type = "text" name = "nombre_cliente">
+            <br />
+            <h3>Direccion:</h3> <input type = "text" name = "direccion_cliente">
+            <br />
+          </div>
+          <div class="segundocli">
+            <h3>Correo Electronico:</h3> <input type = "text" name = "email_cliente">
+            <br />
+            <h3>Telefono:</h3> <input type = "text" name = "telefono_cliente" />
+          </div>
+          <div class="botonescli">
+            <input onclick="consultar()" type = "submit" value = "Consultar" />
+            <input onclick="crear()" type = "submit" value = "Crear" />
+            <input onclick="actualizar()" type = "submit" value = "Actualizar" />
+            <input onclick="borrar()" type = "submit" value = "Borrar" />
+            </div>
+      </div>
   </section>
 
   <script>
-
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
   let searchBtn = document.querySelector(".bx-search");
 
   closeBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("open");
-    menuBtnChange();
+    menuBtnChange();//calling the function(optional)
   });
 
-  searchBtn.addEventListener("click", ()=>{ 
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
     sidebar.classList.toggle("open");
     menuBtnChange(); 
   });
-
-  
   function menuBtnChange() {
    if(sidebar.classList.contains("open")){
      closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");

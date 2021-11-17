@@ -25,11 +25,11 @@
             <span class="tooltip">Productos</span>
         </li>
       <li>
-       <a href="#">
+       <a href="clientes.html">
          <i class='bx bx-user' ></i>
-         <span class="links_name">Usuarios</span>
+         <span class="links_name">Clientes</span>
        </a>
-       <span class="tooltip">Usuarios</span>
+       <span class="tooltip">Clientes</span>
      </li>
      <li>
         <a href="#">
@@ -91,15 +91,13 @@
 
   searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
     sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
+    menuBtnChange(); 
   });
-
-  // following are the code to change sidebar button(optional)
   function menuBtnChange() {
    if(sidebar.classList.contains("open")){
-     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
    }else {
-     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
    }
   }
   </script>

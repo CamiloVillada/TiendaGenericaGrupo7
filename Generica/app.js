@@ -7,18 +7,20 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,'public')));
 const http = require("http");
 
-app.post('/login',(req,res) => {
-    const{usuario,contraseña} =req.body;
-        if(usuario=="admininicial"){
-            if(contraseña=="admin123456"){
-                res.sendFile(path.join(__dirname, '/menu.html'));
-            }else{
-                res.status(100).send('Contraseña Incorrecta')
-            }
-        }else{
-            res.status(100).send('Usuario Incorrecto o no Existe')
-        }
-})
+function ingreso(){
+
+  var u="admininicial";
+  var c="admin123456";
+
+
+  if(document.form.login.value==u && document.form.password.value==c){
+  alert ("Bienvenido a Tienda Generica");
+  window.location="menu.html";}
+  else{
+  alert ("Usuario o Contraseña Incorrectos");
+
+}
+}
 
 app.get('/find',(req,resp) => { 
     http
@@ -40,7 +42,7 @@ app.get('/find',(req,resp) => {
   });
 
  
-  app.post('/save',(req,res) => { 
+  app.post('/crear',(req,res) => { 
       console.log('body: ',req.body);
     const {title,description} =req.body;
     const data = JSON.stringify({
